@@ -7,6 +7,7 @@ import service.HomePageService;
 import service.RegistrationPageService;
 
 public class RegistrationPageTest extends BaseTest {
+
     @Test(description="Navigate of back to main page")
     public void checkReturnToHomePageTest() {
         HomePageService homePageService = new HomePageService();

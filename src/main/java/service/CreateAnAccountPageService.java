@@ -5,10 +5,11 @@ import model.User;
 import page.CreateAnAccountPage;
 
 public class CreateAnAccountPageService {
+
     private CreateAnAccountPage createAnAccountPage = new CreateAnAccountPage();
 
     @Step("Create an account")
-    public CreateAnAccountPageService createAnAccount(User user){
+    public CreateAnAccountPageService createAnAccount(User user) {
         createAnAccountPage.fillInFirstName(user.getFirstName())
                 .fillInLastName(user.getLastName())
                 .fillInPassword(user.getPassword())

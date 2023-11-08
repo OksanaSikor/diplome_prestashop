@@ -24,6 +24,5 @@ public class CreateAnAccountPageTest extends BaseTest {
         String actualTextOfMainPageSection = myAccountPageService.getActualNameOfPageSection();
         String expectedTextOfMainPageSection = "MY ACCOUNT";
         Assert.assertEquals(actualTextOfMainPageSection, expectedTextOfMainPageSection, "The page did not open");
-
     }
 }

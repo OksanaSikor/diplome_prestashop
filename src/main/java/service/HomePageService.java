@@ -28,7 +28,6 @@ public class HomePageService {
         return new HomePageService();
     }
 
-
     @Step("Getting the actual title of the page")
     public String getActualNameOfPageSection(){
         return homePage.getTextOfPageSection();
@@ -73,7 +72,7 @@ public class HomePageService {
     }
 
     @Step("Click the Site Map Section")
-    public HomePageService goToTheDressesSection() {
+    public HomePageService goToTheSiteMapSection() {
         homePage.openPage(HOME_PAGE_URL)
                 .clickOnTheLinkSiteMapSection();
         return new HomePageService();

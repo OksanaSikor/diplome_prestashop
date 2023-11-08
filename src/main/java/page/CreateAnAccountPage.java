@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 @Log4j2
-public class CreateAnAccountPage extends Page{
+public class CreateAnAccountPage extends Page {
 
     @FindBy(xpath = "//input[@id='customer_firstname']")
     private WebElement firstNameField;

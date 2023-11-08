@@ -10,10 +10,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.time.Duration;
 
 public class WebDriverFactory {
+
     private WebDriverFactory() {
     }
 
-    public static WebDriver getWebDriver(){
+    public static WebDriver getWebDriver() {
         WebDriver driver = null;
         switch (System.getProperty("browser","chrome")) {
             case "firefox": {
