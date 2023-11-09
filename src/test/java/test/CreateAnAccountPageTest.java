@@ -1,5 +1,6 @@
 package test;
 
+import io.qameta.allure.Description;
 import model.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,7 +13,8 @@ import utils.Retry;
 public class CreateAnAccountPageTest extends BaseTest {
 
     @Test(description="Checking the transition to the account creation page", retryAnalyzer = Retry.class)
-    public void сheckTheTransitionToTheAccountCreationPageTest() throws InterruptedException {
+    @Description("Checking the transition to the account creation page")
+    public void checkTheTransitionToTheAccountCreationPageTest() throws InterruptedException {
         HomePageService homePageService = new HomePageService();
         homePageService.goAddSingIn();
         RegistrationPageService registrationPageService = new RegistrationPageService();

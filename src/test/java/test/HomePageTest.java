@@ -1,5 +1,6 @@
 package test;
 
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import service.HomePageService;
@@ -8,6 +9,7 @@ import service.RegistrationPageService;
 public class HomePageTest extends BaseTest {
 
     @Test(description="Checking the transition to the registration and login form")
+    @Description("Checking the transition to the registration and login form")
     public void checkTheTransitionToTheRegistrationAndLoginFormTest() throws InterruptedException {
         HomePageService homePageService = new HomePageService();
         homePageService.goAddSingIn();
@@ -19,6 +21,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(description="Checking go to the discounts section")
+    @Description("Checking go to the discounts section")
     public void checkGoToTheDiscountsSectionTest() throws InterruptedException {
         HomePageService homePageService = new HomePageService();
         homePageService.goToTheDiscountsSection();
@@ -29,6 +32,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(description="Checking go to the new products section")
+    @Description("Checking go to the new products section")
     public void checkGoToTheNewProductsSectionTest() throws InterruptedException {
         HomePageService homePageService = new HomePageService();
         homePageService.goToTheNewProductsSection();
@@ -39,6 +43,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(description="Checking go to the popular products section")
+    @Description("Checking go to the popular products section")
     public void checkGoToThePopularProductsSectionTest() throws InterruptedException {
         HomePageService homePageService = new HomePageService();
         homePageService.goToThePopularProductsSection();
@@ -49,6 +54,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(description="Checking go to the our stores section")
+    @Description("Checking go to the our stores section")
     public void checkGoToTheOurStoresSectionTest() throws InterruptedException {
         HomePageService homePageService = new HomePageService();
         homePageService.goToTheOurStoresSection();
@@ -59,6 +65,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(description="Checking go to the contact us section")
+    @Description("Checking go to the contact us section")
     public void checkGoToTheContactUsSectionTest() throws InterruptedException {
         HomePageService homePageService = new HomePageService();
         homePageService.goToTheContactUsSection();
@@ -69,6 +76,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(description="Checking go to the site map section")
+    @Description("Checking go to the site map section")
     public void checkGoToTheSiteMapSectionTest() throws InterruptedException {
         HomePageService homePageService = new HomePageService();
         homePageService.goToTheSiteMapSection();

@@ -1,5 +1,6 @@
 package test;
 
+import io.qameta.allure.Description;
 import model.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,6 +10,7 @@ import service.RegistrationPageService;
 public class RegistrationPageTest extends BaseTest {
 
     @Test(description="Navigate of back to main page")
+    @Description("Navigate of back to main page")
     public void checkReturnToHomePageTest() {
         HomePageService homePageService = new HomePageService();
         homePageService.goAddSingIn();
@@ -21,6 +23,7 @@ public class RegistrationPageTest extends BaseTest {
     }
 
     @Test(description="Checking go to registration form")
+    @Description("Checking go to registration form")
     public void checkTGoToRegistrationFormTest() throws InterruptedException {
         HomePageService homePageService = new HomePageService();
         homePageService.goAddSingIn();
@@ -31,5 +34,4 @@ public class RegistrationPageTest extends BaseTest {
         String expectedTextOfMainPageSection = "CREATE AN ACCOUNT";
         Assert.assertEquals(actualTextOfMainPageSection, expectedTextOfMainPageSection, "The page did not open");
     }
-
 }

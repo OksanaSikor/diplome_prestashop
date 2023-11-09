@@ -2,7 +2,7 @@ package model;
 
 public class User {
 
-    private String email = "fialka@yandex.bel";
+    private String email = "fialka@yandex.aaa";
     private String password = "Gfhjkm555";
     private String firstName = "Oksana";
     private String lastName = "Stankevich";
