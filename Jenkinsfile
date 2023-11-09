@@ -1,25 +1,18 @@
 pipeline {
-   agent any
+    agent any
 
-   tools {
+    tools {
       // Install the Maven version configured as "M3" and add it to the path.
       maven "3.9.4"
       jdk "java"
    }
-    triggers {
-        cron('0 8 * * *')
-    }
-    parameters {
-        gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
-        booleanParam(defaultValue: true, description: 'Headless mode', name: 'HEADLESS')
-        string(name: 'DEPLOY_ENV', defaultValue: 'staging', description: '')
-    }
+
 
    stages {
-      stage('Testing') {
+      stage('Build') {
          steps {
             // Get some code from a GitHub repository
-            git branch: "${params.BRANCH}", url: 'https://github.com/OksanaSikor/diplome_prestashop.git'
+            git 'https://github.com/OksanaSikor/diplome_prestashop.git'
 
             // Run Maven on a Unix agent.
             //sh "mvn clean test"
@@ -45,7 +38,7 @@ pipeline {
                              properties: [],
                              reportBuildPolicy: 'ALWAYS',
                              results: [[path: 'target/allure-results']]
-                     ])
+                        ])
              }
          }
       }
