@@ -5,7 +5,7 @@ import page.HomePage;
 
 public class HomePageService {
 
-    private static final String HOME_PAGE_URL = "http://prestashop.qatestlab.com.ua/";
+    private static final String HOME_PAGE_URL = "http://prestashop.qatestlab.com.ua/ru/";
 
     private HomePage homePage = new HomePage();
 
