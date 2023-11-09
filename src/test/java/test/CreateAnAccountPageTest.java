@@ -7,10 +7,11 @@ import service.CreateAnAccountPageService;
 import service.HomePageService;
 import service.MyAccountPageService;
 import service.RegistrationPageService;
+import utils.Retry;
 
 public class CreateAnAccountPageTest extends BaseTest {
 
-    @Test(description="Checking the transition to the account creation page")
+    @Test(description="Checking the transition to the account creation page", retryAnalyzer = Retry.class)
     public void сheckTheTransitionToTheAccountCreationPageTest() throws InterruptedException {
         HomePageService homePageService = new HomePageService();
         homePageService.goAddSingIn();
