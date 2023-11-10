@@ -11,9 +11,6 @@ public class HomePage extends Page {
     @FindBy(xpath = "//h1[@class='page-heading product-listing']")
     private WebElement nameOfPage;
 
-    @FindBy(xpath = "//a[@class='login']")
-    private WebElement SingIn;
-
     @FindBy(xpath = "//a[@title='Скидки']")
     private WebElement priceDrop;
 
@@ -41,6 +38,18 @@ public class HomePage extends Page {
     @FindBy(xpath = "//h1[@class='page-heading']")
     private WebElement nameOfPageSiteMap;
 
+    @FindBy(xpath = "//input[@name='search_query']")
+    private WebElement searchField;
+
+    @FindBy(xpath = "//button[@name='submit_search']")
+    private WebElement searchButton;
+
+    @FindBy(xpath = "//span[@class='lighter']")
+    private WebElement nameOfPageSearch;
+
+    @FindBy(xpath = "//a[@title='Посмотреть корзину']")
+    private WebElement cardButton;
+
 
     public HomePage openPage(String url) {
         driver.get(url);
@@ -49,10 +58,6 @@ public class HomePage extends Page {
 
     public String getTextOfMainPageSection() {
         return nameOfMainPage.getText();
-    }
-
-    public void clickLogin() {
-        SingIn.click();
     }
 
     public void clickOnTheLinkDiscounts() {
@@ -93,5 +98,22 @@ public class HomePage extends Page {
 
     public String getTextOfPageSiteMapSection() {
         return nameOfPageSiteMap.getText();
+    }
+
+    public HomePage searchField(String name) {
+        searchField.sendKeys(name);
+        return this;
+    }
+
+    public void clickSearch() {
+        searchButton.click();
+    }
+
+    public String getTextOfSearchPageSection() {
+        return nameOfPageSearch.getText();
+    }
+
+    public void clickCard() {
+        cardButton.click();
     }
 }

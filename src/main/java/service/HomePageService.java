@@ -8,6 +8,7 @@ import page.HomePage;
 public class HomePageService {
 
     private static final String HOME_PAGE_URL = "http://prestashop.qatestlab.com.ua/ru/";
+    private static final String ACCOUNT_PAGE_URL = "http://prestashop.qatestlab.com.ua/ru/authentication?back=my-account";
 
     private HomePage homePage = new HomePage();
 
@@ -20,8 +21,7 @@ public class HomePageService {
     @Step("Click the Sing In button")
     public RegistrationPageService goAddSingIn() {
         log.info("Click the Sing In button");
-        homePage.openPage(HOME_PAGE_URL)
-                .clickLogin();
+        homePage.openPage(ACCOUNT_PAGE_URL);
         return new RegistrationPageService();
     }
 
@@ -96,4 +96,28 @@ public class HomePageService {
         log.info("Getting the actual title of the page Site Map");
         return homePage.getTextOfPageSiteMapSection();
     }
+
+    @Step("Click the search field")
+    public HomePageService clickTheSearchField() {
+        log.info("Click the search field");
+        homePage.openPage(HOME_PAGE_URL)
+                .searchField("dress")
+                .clickSearch();
+        return new HomePageService();
+    }
+
+    @Step("Getting the actual search results")
+    public String getActualSearchResults(){
+        log.info("");
+        return homePage.getTextOfSearchPageSection();
+    }
+
+    @Step("Go to cart")
+    public HomePageService clickTheCard() {
+        log.info("Go to cart");
+        homePage.openPage(HOME_PAGE_URL)
+                .clickCard();
+        return new HomePageService();
+    }
+
 }
