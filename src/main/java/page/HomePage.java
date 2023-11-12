@@ -13,28 +13,28 @@ public class HomePage extends Page {
     @FindBy(xpath = "//h1[@class='page-heading product-listing']")
     private WebElement nameOfPage;
 
-    @FindBy(xpath = "//li[@class='item']//a[@title='Specials']")
+    @FindBy(xpath = "//a[@title='Specials']")
     private WebElement priceDrop;
 
-    @FindBy(xpath = "//li[@class='item']//a[@title='New products']")
+    @FindBy(xpath = "//a[@title='New products']")
     private WebElement newProducts;
 
-    @FindBy(xpath = "//li[@class='item']//a[@title='Best sellers']")
+    @FindBy(xpath = "//a[@title='Best sellers']")
     private WebElement popularProducts;
 
-    @FindBy(xpath = "//li[@class='item']//a[@title='Our stores']")
+    @FindBy(xpath = "//a[@title='Our stores']")
     private WebElement ourStores;
 
     @FindBy(xpath = "//h1[@class='page-heading']")
     private WebElement nameOfPageOurStories;
 
-    @FindBy(xpath = "//li[@class='item']//a[@title='Contact us']")
+    @FindBy(xpath = "//a[@title='Contact us']")
     private WebElement contactUs;
 
     @FindBy(xpath = "//h1[@class='page-heading bottom-indent']")
     private WebElement nameOfPageContactUs;
 
-    @FindBy(xpath = "//li[@class='item']//a[@title='Sitemap']")
+    @FindBy(xpath = "//a[@title='Sitemap']")
     private WebElement siteMap;
 
     @FindBy(xpath = "//h1[@class='page-heading']")
