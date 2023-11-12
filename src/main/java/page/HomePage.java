@@ -2,6 +2,11 @@ package page;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.Waiter;
+
+import java.time.Duration;
+
+import static utils.Waiter.WAIT_2_SECONDS;
 
 public class HomePage extends Page {
 
@@ -61,11 +66,11 @@ public class HomePage extends Page {
     }
 
     public void clickOnTheLinkDiscounts() {
-        priceDrop.click();
+        Waiter.waitElementToBeClickable(priceDrop).click();
     }
 
     public void clickOnTheLinkNewProducts() {
-        newProducts.click();
+        Waiter.waitElementToBeClickable(newProducts).click();
     }
 
     public String getTextOfPageSection() {
@@ -73,11 +78,12 @@ public class HomePage extends Page {
     }
 
     public void clickOnTheLinkPopularProducts() {
-        popularProducts.click();
+        Waiter.waitElementToBeClickable(popularProducts).click();
+
     }
 
     public void clickOnTheLinkOurStores() {
-        ourStores.click();
+        Waiter.waitElementToBeClickable(ourStores).click();
     }
 
     public String getTextOfPageOurStoresSection() {
@@ -85,7 +91,7 @@ public class HomePage extends Page {
     }
 
     public void clickOnTheLinkContactUs() {
-        contactUs.click();
+        Waiter.waitElementToBeClickable(contactUs).click();
     }
 
     public String getTextOfPageContactUsSection() {
@@ -93,7 +99,7 @@ public class HomePage extends Page {
     }
 
     public void clickOnTheLinkSiteMapSection() {
-        siteMap.click();
+        Waiter.waitElementToBeClickable(siteMap).click();
     }
 
     public String getTextOfPageSiteMapSection() {
@@ -106,7 +112,7 @@ public class HomePage extends Page {
     }
 
     public void clickSearch() {
-        searchButton.click();
+        Waiter.waitElementToBeClickable(searchButton).click();
     }
 
     public String getTextOfSearchPageSection() {
@@ -114,6 +120,6 @@ public class HomePage extends Page {
     }
 
     public void clickCard() {
-        cardButton.click();
+        Waiter.waitElementToBeClickable(cardButton).click();
     }
 }

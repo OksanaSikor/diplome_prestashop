@@ -34,7 +34,7 @@ public class Waiter {
     public static void fluentWaitElementToBeClickable(WebElement element) {
         new FluentWait<>(DriverSingleton.getInstance().getDriver())
                 .withTimeout(Duration.ofSeconds(WAIT_10_SECONDS))
-                .pollingEvery(Duration.ofSeconds(WAIT_500_MILLISECONDS)) //интервал опрашиваяя элемента
+                .pollingEvery(Duration.ofSeconds(WAIT_500_MILLISECONDS))
                 .ignoring(NoSuchElementException.class)
                 .until((ExpectedCondition<Boolean>) webDriver -> element.isDisplayed() && element.isEnabled());
     }

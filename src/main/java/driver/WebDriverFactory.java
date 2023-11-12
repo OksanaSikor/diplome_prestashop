@@ -12,6 +12,7 @@ import java.time.Duration;
 
 import static utils.Waiter.WAIT_2_SECONDS;
 
+
 @Log4j2
 public class WebDriverFactory {
 
