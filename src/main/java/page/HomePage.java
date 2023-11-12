@@ -11,28 +11,28 @@ public class HomePage extends Page {
     @FindBy(xpath = "//h1[@class='page-heading product-listing']")
     private WebElement nameOfPage;
 
-    @FindBy(xpath = "//a[@title='Скидки']")
+    @FindBy(xpath = "//a[contains(text(),'Скидки')]")
     private WebElement priceDrop;
 
-    @FindBy(xpath = "//a[@title='Новые товары']")
+    @FindBy(xpath = "//a[contains(text(),'Новые товары')]")
     private WebElement newProducts;
 
-    @FindBy(xpath = "//a[@title='Популярные товары']")
+    @FindBy(xpath = "//a[contains(text(),'Популярные товары')]")
     private WebElement popularProducts;
 
-    @FindBy(xpath = "//a[@title='Наши магазины']")
+    @FindBy(xpath = "//a[contains(text(),'Наши магазины')]")
     private WebElement ourStores;
 
     @FindBy(xpath = "//h1[@class='page-heading']")
     private WebElement nameOfPageOurStories;
 
-    @FindBy(xpath = "//a[@title='Свяжитесь с нами']")
+    @FindBy(xpath = "//a[contains(text(),'Свяжитесь с нами')]")
     private WebElement contactUs;
 
     @FindBy(xpath = "//h1[@class='page-heading bottom-indent']")
     private WebElement nameOfPageContactUs;
 
-    @FindBy(xpath = "//a[@title='Карта сайта']")
+    @FindBy(xpath = "//a[contains(text(),'Карта сайта')]")
     private WebElement siteMap;
 
     @FindBy(xpath = "//h1[@class='page-heading']")
@@ -47,7 +47,7 @@ public class HomePage extends Page {
     @FindBy(xpath = "//span[@class='lighter']")
     private WebElement nameOfPageSearch;
 
-    @FindBy(xpath = "//a[@title='Посмотреть корзину']")
+    @FindBy(xpath = "//b[contains(text(),'Корзина:')]")
     private WebElement cardButton;
 
 
