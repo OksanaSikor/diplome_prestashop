@@ -13,7 +13,7 @@ public class HomePage extends Page {
     @FindBy(xpath = "//h1[@class='page-heading product-listing']")
     private WebElement nameOfPage;
 
-    @FindBy(xpath = "//a[@title='Specials']")
+    @FindBy(xpath = "//li[@class='item']//a[@title='Specials']")
     private WebElement priceDrop;
 
     @FindBy(xpath = "//a[@title='New products']")
