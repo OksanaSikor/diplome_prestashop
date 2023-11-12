@@ -10,14 +10,14 @@ import java.time.Duration;
 public class Waiter {
 
     public final static int WAIT_2_SECONDS = 2;
-    public final static int WAIT_500_MILLISECONDS = 500;
+    public final static int WAIT_10_SECONDS = 15;
 
     private Waiter() {
 
     }
 
     public static WebElement waitElementToBeClickable(WebElement element) {
-        return new WebDriverWait(DriverSingleton.getInstance().getDriver(), Duration.ofSeconds(WAIT_500_MILLISECONDS))
+        return new WebDriverWait(DriverSingleton.getInstance().getDriver(), Duration.ofSeconds(WAIT_10_SECONDS))
                 .until(ExpectedConditions.elementToBeClickable(element));
     }
 
