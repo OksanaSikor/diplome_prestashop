@@ -17,7 +17,7 @@ public class RegistrationPageTest extends BaseTest {
         RegistrationPageService registrationPageService = new RegistrationPageService();
 
         String actualTextOfMainPageSection =registrationPageService.getActualNameOfPageSection();
-        String expectedTextOfMainPageSection = "AUTHENTICATION";
+        String expectedTextOfMainPageSection = "CREATE AN ACCOUNT";
         Assert.assertEquals(actualTextOfMainPageSection, expectedTextOfMainPageSection, "The page did not open");
     }
 }
