@@ -16,9 +16,8 @@ public class CardPageService {
     }
 
     @Step("Navigate of back to main page")
-    public HomePageService navigateOfBackToMainPage(){
+    public void navigateOfBackToMainPage(){
         log.info("Navigate of back to main page");
         cardPage.clickButtonOfBack();
-        return new HomePageService();
     }
 }

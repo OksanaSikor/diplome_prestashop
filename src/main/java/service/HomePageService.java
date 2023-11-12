@@ -26,11 +26,10 @@ public class HomePageService {
     }
 
     @Step("Click the Discounts In link")
-    public HomePageService goToTheDiscountsSection() {
+    public void goToTheDiscountsSection() {
         log.info("Click the Discounts In link");
         homePage.openPage(HOME_PAGE_URL)
                 .clickOnTheLinkDiscounts();
-        return new HomePageService();
     }
 
     @Step("Getting the actual title of the page")
@@ -40,27 +39,24 @@ public class HomePageService {
     }
 
     @Step("Click the New Products In link")
-    public HomePageService goToTheNewProductsSection() {
+    public void goToTheNewProductsSection() {
         log.info("Click the New Products In link");
         homePage.openPage(HOME_PAGE_URL)
                 .clickOnTheLinkNewProducts();
-        return new HomePageService();
     }
 
     @Step("Click the Popular Products In link")
-    public HomePageService goToThePopularProductsSection() {
+    public void goToThePopularProductsSection() {
         log.info("Click the Popular Products In link");
         homePage.openPage(HOME_PAGE_URL)
                 .clickOnTheLinkPopularProducts();
-        return new HomePageService();
     }
 
     @Step("Click the Our Stores In link")
-    public HomePageService goToTheOurStoresSection() {
+    public void goToTheOurStoresSection() {
         log.info("Click the Our Stores In link");
         homePage.openPage(HOME_PAGE_URL)
                 .clickOnTheLinkOurStores();
-        return new HomePageService();
     }
 
     @Step("Getting the actual title of the page Our Stores")
@@ -69,12 +65,11 @@ public class HomePageService {
         return homePage.getTextOfPageOurStoresSection();
     }
 
-    @Step("Click the Our Stores In link")
-    public HomePageService goToTheContactUsSection() {
-        log.info("Click the Our Stores In link");
+    @Step("Click the Our Contact Us link")
+    public void goToTheContactUsSection() {
+        log.info("Click the Our Contact Us link");
         homePage.openPage(HOME_PAGE_URL)
                 .clickOnTheLinkContactUs();
-        return new HomePageService();
     }
 
     @Step("Getting the actual title of the page Contact Us")
@@ -84,11 +79,10 @@ public class HomePageService {
     }
 
     @Step("Click the Site Map Section")
-    public HomePageService goToTheSiteMapSection() {
+    public void goToTheSiteMapSection() {
         log.info("Click the Site Map Section");
         homePage.openPage(HOME_PAGE_URL)
                 .clickOnTheLinkSiteMapSection();
-        return new HomePageService();
     }
 
     @Step("Getting the actual title of the page Site Map")
@@ -98,12 +92,11 @@ public class HomePageService {
     }
 
     @Step("Click the search field")
-    public HomePageService clickTheSearchField() {
+    public void clickTheSearchField() {
         log.info("Click the search field");
         homePage.openPage(HOME_PAGE_URL)
                 .searchField("dress")
                 .clickSearch();
-        return new HomePageService();
     }
 
     @Step("Getting the actual search results")
@@ -113,11 +106,10 @@ public class HomePageService {
     }
 
     @Step("Go to cart")
-    public HomePageService clickTheCard() {
+    public void clickTheCard() {
         log.info("Go to cart");
         homePage.openPage(HOME_PAGE_URL)
                 .clickCard();
-        return new HomePageService();
-    }
+        }
 
 }
