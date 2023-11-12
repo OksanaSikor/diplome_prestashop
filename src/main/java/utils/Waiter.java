@@ -22,7 +22,7 @@ public class Waiter {
     }
 
     public static WebElement waitElementToBeClickable(WebElement element) {
-        return new WebDriverWait(DriverSingleton.getInstance().getDriver(), Duration.ofSeconds(WAIT_10_SECONDS))
+        return new WebDriverWait(DriverSingleton.getInstance().getDriver(), Duration.ofSeconds(WAIT_500_MILLISECONDS))
                 .until(ExpectedConditions.elementToBeClickable(element));
     }
 
