@@ -16,25 +16,25 @@ public class HomePage extends Page {
     @FindBy(xpath = "//li[@class='item']//a[@title='Specials']")
     private WebElement priceDrop;
 
-    @FindBy(xpath = "//a[@title='New products']")
+    @FindBy(xpath = "//li[@class='item']//a[@title='New products']")
     private WebElement newProducts;
 
-    @FindBy(xpath = "//a[@title='Best sellers']")
+    @FindBy(xpath = "//li[@class='item']//a[@title='Best sellers']")
     private WebElement popularProducts;
 
-    @FindBy(xpath = "//a[@title='Our stores']")
+    @FindBy(xpath = "//li[@class='item']//a[@title='Our stores']")
     private WebElement ourStores;
 
     @FindBy(xpath = "//h1[@class='page-heading']")
     private WebElement nameOfPageOurStories;
 
-    @FindBy(xpath = "//a[@title='Contact us']")
+    @FindBy(xpath = "//li[@class='item']//a[@title='Contact us']")
     private WebElement contactUs;
 
     @FindBy(xpath = "//h1[@class='page-heading bottom-indent']")
     private WebElement nameOfPageContactUs;
 
-    @FindBy(xpath = "//a[@title='Sitemap']")
+    @FindBy(xpath = "//li[@class='item']//a[@title='Sitemap']")
     private WebElement siteMap;
 
     @FindBy(xpath = "//h1[@class='page-heading']")
@@ -51,7 +51,6 @@ public class HomePage extends Page {
 
     @FindBy(xpath = "//a[@title='View my shopping cart']")
     private WebElement cardButton;
-
 
     public HomePage openPage(String url) {
         driver.get(url);
