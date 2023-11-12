@@ -7,8 +7,8 @@ import page.HomePage;
 @Log4j2
 public class HomePageService {
 
-    private static final String HOME_PAGE_URL = "http://prestashop.qatestlab.com.ua/ru/";
-    private static final String ACCOUNT_PAGE_URL = "http://prestashop.qatestlab.com.ua/ru/authentication?back=my-account";
+    private static final String HOME_PAGE_URL = "http://prestashop.qatestlab.com.ua/en/";
+    private static final String ACCOUNT_PAGE_URL = "http://prestashop.qatestlab.com.ua/en/authentication?back=my-account";
 
     private HomePage homePage = new HomePage();
 

@@ -7,11 +7,10 @@ import org.openqa.selenium.support.FindBy;
 @Log4j2
 public class RegistrationPage extends Page {
 
-    @FindBy(xpath = "//h1[contains(text(),'Create an account')]")
+    @FindBy(xpath = "//h3[@class='page-subheading']")
     private WebElement nameToSection;
 
     public String getTextOfPageSection() {
         return nameToSection.getText();
     }
-
 }
