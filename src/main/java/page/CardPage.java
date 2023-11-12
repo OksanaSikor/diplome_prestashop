@@ -2,6 +2,7 @@ package page;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.Waiter;
 
 public class CardPage extends Page{
 
@@ -14,7 +15,8 @@ public class CardPage extends Page{
     public String getTextOfCardPageSection() {
         return nameOfPage.getText();
     }
+
     public void clickButtonOfBack() {
-        backToHomeButton.click();
+        Waiter.waitElementToBeClickable(backToHomeButton).click();
     }
 }

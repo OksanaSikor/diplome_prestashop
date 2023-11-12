@@ -101,7 +101,7 @@ public class HomePageService {
 
     @Step("Getting the actual search results")
     public String getActualSearchResults(){
-        log.info("");
+        log.info("Getting the actual search results");
         return homePage.getTextOfSearchPageSection();
     }
 
@@ -111,5 +111,4 @@ public class HomePageService {
         homePage.openPage(HOME_PAGE_URL)
                 .clickCard();
         }
-
 }

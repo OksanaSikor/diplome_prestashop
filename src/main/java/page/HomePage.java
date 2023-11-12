@@ -4,9 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.Waiter;
 
-import java.time.Duration;
-
-import static utils.Waiter.WAIT_2_SECONDS;
 
 public class HomePage extends Page {
 
@@ -79,7 +76,6 @@ public class HomePage extends Page {
 
     public void clickOnTheLinkPopularProducts() {
         Waiter.waitElementToBeClickable(popularProducts).click();
-
     }
 
     public void clickOnTheLinkOurStores() {
