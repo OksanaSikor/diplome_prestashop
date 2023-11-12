@@ -7,7 +7,7 @@ import service.CardPageService;
 import service.HomePageService;
 import utils.Retry;
 
-public class CardPageTest {
+public class CardPageTest extends BaseTest {
 
     @Test(description="Checking go to cart", retryAnalyzer = Retry.class)
     @Description("Checking go to cart")

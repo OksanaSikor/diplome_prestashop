@@ -7,7 +7,7 @@ import service.HomePageService;
 import service.RegistrationPageService;
 import utils.Retry;
 
-public class RegistrationPageTest {
+public class RegistrationPageTest extends BaseTest {
 
     @Test(description="Checking the transition to the registration and login form", retryAnalyzer = Retry.class)
     @Description("Checking the transition to the registration and login form")
@@ -17,7 +17,7 @@ public class RegistrationPageTest {
         RegistrationPageService registrationPageService = new RegistrationPageService();
 
         String actualTextOfMainPageSection =registrationPageService.getActualNameOfPageSection();
-        String expectedTextOfMainPageSection = "CREATE AN ACCOUNT";
+        String expectedTextOfMainPageSection = "AUTHENTICATION";
         Assert.assertEquals(actualTextOfMainPageSection, expectedTextOfMainPageSection, "The page did not open");
     }
 }
