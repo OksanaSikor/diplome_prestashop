@@ -16,25 +16,25 @@ public class HomePage extends Page {
     @FindBy(xpath = "//a[contains(@href, 'prices-drop')]")
     private WebElement priceDrop;
 
-    @FindBy(xpath = "//a[@title='New products']")
+    @FindBy(xpath = "//a[contains(@href, 'new-products')]")
     private WebElement newProducts;
 
-    @FindBy(xpath = "//a[@title='Best sellers']")
+    @FindBy(xpath = "//a[contains(@href, 'best-sales')]")
     private WebElement popularProducts;
 
-    @FindBy(xpath = "//a[@title='Our stores']")
+    @FindBy(xpath = "//a[contains(@href, 'stores')]")
     private WebElement ourStores;
 
     @FindBy(xpath = "//h1[@class='page-heading']")
     private WebElement nameOfPageOurStories;
 
-    @FindBy(xpath = "//a[@title='Contact us']")
+    @FindBy(xpath = "//a[contains(@href, 'contact-us')]")
     private WebElement contactUs;
 
     @FindBy(xpath = "//h1[@class='page-heading bottom-indent']")
     private WebElement nameOfPageContactUs;
 
-    @FindBy(xpath = "//a[@title='Sitemap']")
+    @FindBy(xpath = "//a[contains(@href, 'sitemap')]")
     private WebElement siteMap;
 
     @FindBy(xpath = "//h1[@class='page-heading']")

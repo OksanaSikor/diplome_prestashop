@@ -38,13 +38,14 @@ public class WebDriverFactory {
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--incognito");
                     chromeOptions.addArguments("--remote-allow-origins=*");
+                    chromeOptions.addArguments("--window-size=1920,1080");
                     driver = new ChromeDriver(chromeOptions);
                 } catch (Exception e) {
                     log.fatal("Driver did not start!");
                 }
             }
         }
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WAIT_2_SECONDS));
         return driver;
     }
