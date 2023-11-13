@@ -49,7 +49,7 @@ public class HomePage extends Page {
     @FindBy(xpath = "//span[@class='lighter']")
     private WebElement nameOfPageSearch;
 
-    @FindBy(xpath = "//a[@title='View my shopping cart']")
+    @FindBy(xpath = "//a[contains(@href, 'order')]")
     private WebElement cardButton;
 
     public HomePage openPage(String url) {
