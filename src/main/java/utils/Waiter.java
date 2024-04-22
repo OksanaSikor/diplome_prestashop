@@ -10,7 +10,7 @@ import java.time.Duration;
 public class Waiter {
 
     public final static int WAIT_2_SECONDS = 2;
-    public final static int WAIT_10_SECONDS = 15;
+    public final static int WAIT_10_SECONDS = 10;
 
     private Waiter() {
 

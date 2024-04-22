@@ -11,7 +11,7 @@ public class RegistrationPageTest extends BaseTest {
 
     @Test(description="Checking the transition to the registration and login form", retryAnalyzer = Retry.class)
     @Description("Checking the transition to the registration and login form")
-    public void checkTheTransitionToTheRegistrationAndLoginFormTest() throws InterruptedException {
+    public void checkTheTransitionToTheRegistrationAndLoginFormTest()  {
         HomePageService homePageService = new HomePageService();
         homePageService.goAddSingIn();
         RegistrationPageService registrationPageService = new RegistrationPageService();
